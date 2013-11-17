@@ -25,7 +25,8 @@ There are a few other implementations of the general UI pattern, but it was diff
 
 1.  Add the following meta viewport tag:
 
-        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, minimum-scale=1&quot; /&gt;
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
 2.  Include the `drawer.css` stylesheet
 3.  Wrap your sidebar content in an element with a class of `drawer`
 4.  Wrap any content that “butts up” to the drawer in an element with a class of `drawer-butt`. (This will usually be your main content, but it may also be a header, for example. See [simple example](examples/simple.html).)
@@ -33,13 +34,13 @@ There are a few other implementations of the general UI pattern, but it was diff
 
     For example, if you had a toggle element with a `data-drawer-toggle` attribute, you might toggle the drawer with jQuery, as follows:
 
-          <pre>`$(document).on('click touchstart', '[data-drawer-toggle]', function() {
-      $('body').toggleClass('drawer-open');
-    });
+        $(document).on('click touchstart', '[data-drawer-toggle]', function() {
+          $('body').toggleClass('drawer-open');
+        });
 
 ## Browser Support
 
-Drawer has been designed to work with _modern browers_ i.e. **recent versions** of **Chrome**, **Firefox**, **Internet Explorer (9+)**, and **Opera**. The two column layout will still work on **IE8**, but toggling the `drawer-open` class name will have no effect.
+Drawer has been designed to work with _modern browers_ i.e. **recent versions** of **Chrome**, **Firefox**, **Internet Explorer**, and **Opera**. The two column layout will still work on **IE8**, but toggling the `drawer-open` class name will have no effect.
 
 ## Examples
 
