@@ -1,0 +1,94 @@
+/*
+  Drawer v0.1
+  ============
+  Copyright (c) Dom Christie 2013 */
+
+@charset "UTF-8";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Transitions
+  ------------ */
+
+.drawer,
+.drawer-butt {
+  -webkit-transition: margin-left .2s, -webkit-transform .2s;
+  transition: margin-left .2s, transform .2s;
+
+  /* **Important**: prevent transition flickering
+    (see http://stackoverflow.com/a/3921870/783009) */
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/*
+  drawer
+  ------- */
+
+.drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  overflow-y: auto;
+  z-index: 2;
+}
+.drawer,
+.drawer-open .drawer {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+/* 
+  drawer-butt
+  ------------
+  Wraps any content thats “butts up” to the drawer */
+
+.drawer-butt {
+  display: block;
+  width: auto;
+  margin-left: 250px;
+}
+
+.drawer-open .drawer-butt {
+  margin-left: 250px;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+/*
+  Media Queries
+  -------------- */
+
+@media only screen and (max-width: 870px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* By default, position the drawer off-canvas */
+  .drawer {
+    -webkit-transform: translate(-250px, 0);
+    -ms-transform: translate(-250px, 0);
+    transform: translate(-250px, 0);
+  }
+
+  .drawer-butt {
+    margin-left: 0;
+  }
+  
+  .drawer-open .drawer-butt {
+    margin-left: 0;
+    width: 100%;
+    -webkit-transform: translate(250px, 0);
+    -ms-transform: translate(250px, 0);
+    transform: translate(250px, 0);
+  }
+}
