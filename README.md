@@ -46,7 +46,7 @@ Drawer has been designed to work with _modern browers_ i.e. **recent versions** 
 
 The default implementation makes use of `position: fixed` to achieve two independent scrolling columns. `position: fixed` is poorly supported in some older browers, in particular iOS Safari <=4 and Android <=2. Users of these browsers may not be able view the all the content in the drawer (iOS), or may not be able to scroll it (Android). Fallback support can be added with a bit of user agent (UA) sniffing. (Given that support for `position: fixed` is complex and therefore not binary, unfortunately UA sniffing may be the only way. See Brad Frost’s [Fixed Positioning in Mobile Browsers](http://bradfrostweb.com/blog/mobile/fixed-position/).)
 
-      <p>UA sniffing is used in the examples: see [`examples/ua-sniffer.js`](https://github.com/domchristie/drawer/blob/master/examples/ua-sniffer.js), and the styles [`examples/site.css`](https://github.com/domchristie/drawer/blob/master/examples/site.css).
+UA sniffing is used in the examples: see [`examples/ua-sniffer.js`](https://github.com/domchristie/drawer/blob/master/examples/ua-sniffer.js), and the styles [`examples/site.css`](https://github.com/domchristie/drawer/blob/master/examples/site.css).
 
 ## Examples
 
