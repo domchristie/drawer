@@ -1,5 +1,5 @@
 /*
-  Drawer v0.2
+  Drawer v0.2.1
   ============
   Copyright (c) Dom Christie 2013 */
 
@@ -75,6 +75,13 @@ body {
     https://bugzilla.mozilla.org/show_bug.cgi?id=625289) */
   html, body {
     overflow-x: hidden;
+  }
+
+  /* Add momentum scrolling when drawer is open. Apply this breaks the
+    tap-status-bar-to-return-to-top behaviour, however this is acceptable
+    when the drawer is open */
+  .drawer-open .drawer {
+    -webkit-overflow-scrolling: touch;
   }
 
   .drawer-butt {
