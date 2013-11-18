@@ -29,7 +29,7 @@ There are a few other implementations of the general UI pattern, but it was diff
 
 2.  Include the `drawer.css` stylesheet
 3.  Wrap your sidebar content in an element with a class of `drawer`
-4.  Wrap any content that “butts up” to the drawer in an element with a class of `drawer-butt`. (This will usually be your main content, but it may also be a header, for example. See [simple example](examples/simple.html).)
+4.  Wrap any content that “butts up” to the drawer in an element with a class of `drawer-butt`. (This will usually be your main content, but it may also be a header, for example. See [simple example](/drawer/examples/simple.html).)
 5.  Toggle the drawer by adding/removing the `drawer-open` class to the body element
 
     For example, if you had a toggle element with a `data-drawer-toggle` attribute, you might toggle the drawer with jQuery, as follows:
@@ -44,8 +44,8 @@ Drawer has been designed to work with _modern browers_ i.e. **recent versions** 
 
 ## Examples
 
-*   [A basic fixed header and toggle example](/examples/simple.html)
-*   [A responsive navigation bar example](/examples/navigation.html)
+*   [A basic fixed header and toggle example](/drawer/examples/simple.html)
+*   [A responsive navigation bar example](/drawer/examples/navigation.html)
 
 ## Bibliography
 
