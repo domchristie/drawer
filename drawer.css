@@ -27,7 +27,8 @@ body {
 /* 
   drawer-butt
   ------------
-  Wraps any content thats “butts up” to the drawer */
+  Wraps any content thats “butts up” to the drawer
+  (for want of a better class name!) */
 
 .drawer-butt {
   display: block;
