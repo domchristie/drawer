@@ -78,9 +78,9 @@ body {
     overflow-x: hidden;
   }
 
-  /* Add momentum scrolling when drawer is open. Apply this breaks the
-    tap-status-bar-to-return-to-top behaviour, however this is acceptable
-    when the drawer is open */
+  /* Add momentum scrolling when drawer is open. Applying this breaks the
+    tap-status-bar-to-return-to-top behaviour, however, given that the drawer is
+    open, and content is shifted, this is deemed acceptable */
   .drawer-open .drawer {
     -webkit-overflow-scrolling: touch;
   }
