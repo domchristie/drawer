@@ -51,6 +51,7 @@ Drawer has been designed to work with _modern browers_ i.e. **recent versions** 
 
 Drawer uses ideas from the following resources:
 
+*   [Mailchimp Pattern Library](http://ux.mailchimp.com/patterns)
 *   [Multi-Device Layout Patterns](http://www.lukew.com/ff/entry.asp?1514) by Luke Wroblewski
 *   [Off Canvas: A Multi-Device Web Layout Pattern](http://jasonweaver.name/lab/offcanvas/) by Jason Weaver
 *   [Jank Free](http://jankfree.org/)
