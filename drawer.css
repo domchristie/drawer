@@ -32,7 +32,7 @@ body {
 /* 
   drawer-butt
   ------------
-  Wraps any content thats “butts up” to the drawer
+  Wraps any content that “butts up” to the drawer
   (for want of a better class name!) */
 
 .drawer-butt {
@@ -55,8 +55,6 @@ body {
   /* Transitions */
   -webkit-transition: margin-left .2s, -webkit-transform .2s;
   transition: margin-left .2s, transform .2s;
-
-
 }
 
 .drawer-open .drawer-butt {
