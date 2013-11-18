@@ -1,5 +1,5 @@
 /*
-  Drawer v0.1
+  Drawer v0.2
   ============
   Copyright (c) Dom Christie 2013 */
 
@@ -8,22 +8,6 @@
 body {
   margin: 0;
   padding: 0;
-}
-
-/*
-  Transitions
-  ------------ */
-
-.drawer,
-.drawer-butt {
-  -webkit-transition: margin-left .2s, -webkit-transform .2s;
-  transition: margin-left .2s, transform .2s;
-
-  /* **Important**: prevent transition flickering
-    (see http://stackoverflow.com/a/3921870/783009) */
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 /*
@@ -37,13 +21,7 @@ body {
   left: 0;
   width: 250px;
   overflow-y: auto;
-  z-index: 2;
-}
-.drawer,
-.drawer-open .drawer {
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
+  z-index: auto;
 }
 
 /* 
@@ -53,8 +31,30 @@ body {
 
 .drawer-butt {
   display: block;
+
+  /* Ensures `.drawer-butt` overlaps `.drawer` */
+  position: relative;
+  z-index: 2;
+
+  /* **Important**: Create new block formatting context to prevent
+    overflow/sizing issues */
+  overflow: auto;
+  
   width: auto;
   margin-left: 250px;
+
+  /* Override this with anything, as long as it’s not transparent/none! */
+  background: #e6e6e6;
+
+  /* Transitions */
+  -webkit-transition: margin-left .2s, -webkit-transform .2s;
+  transition: margin-left .2s, transform .2s;
+
+  /* **Important**: prevent transition flickering
+    (see http://stackoverflow.com/a/3921870/783009) */
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .drawer-open .drawer-butt {
@@ -69,15 +69,12 @@ body {
   -------------- */
 
 @media only screen and (max-width: 870px) {
-  body {
+  /* **Unfortunate, but necessary!**: prevents content from being scrolled
+    over the drawer. Ideally, this would only be placed on `.drawer-open`, but
+    doing so prevents CSS transitions from working on Firefox (see
+    https://bugzilla.mozilla.org/show_bug.cgi?id=625289) */
+  html, body {
     overflow-x: hidden;
-  }
-
-  /* By default, position the drawer off-canvas */
-  .drawer {
-    -webkit-transform: translate(-250px, 0);
-    -ms-transform: translate(-250px, 0);
-    transform: translate(-250px, 0);
   }
 
   .drawer-butt {

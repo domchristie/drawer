@@ -1,12 +1,7 @@
 /*
   drawer.css overrides
   --------------------
-  Hides the drawer on larger viewports
   Makes content any “butted” content full width */
-
-.drawer {
-  display: none;
-}
 
 .drawer-butt,
 .drawer-open .drawer-butt {
@@ -56,11 +51,6 @@
   -------------- */
 
 @media only screen and (max-width: 870px) {
-
-  /* Reset drawer display, so that it’s visible on smaller viewports */
-  .drawer {
-    display: block;
-  }
 
   .app__hd [data-drawer-toggle] {
     display: inline;
