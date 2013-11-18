@@ -40,7 +40,13 @@ There are a few other implementations of the general UI pattern, but it was diff
 
 ## Browser Support
 
-Drawer has been designed to work with _modern browers_ i.e. **recent versions** of **Chrome**, **Firefox**, **Internet Explorer**, and **Opera**. The two column layout will still work on **IE8**, but toggling the `drawer-open` class name will have no effect.
+Drawer has been designed to work with _modern browers_ i.e. **recent versions** of **Chrome**, **Firefox**, **Safari**, **Internet Explorer** (although sliding animations will not work in IE9), and **Opera**. IE 7/8 users will see the two-column version of the site (toggling will have no effect).
+
+### Adding Support for iOS Safari <=4 and Android <=2
+
+The default implementation makes use of `position: fixed` to achieve two independent scrolling columns. `position: fixed` is poorly supported in some older browers, in particular iOS Safari <=4 and Android <=2. Users of these browsers may not be able view the all the content in the drawer (iOS), or may not be able to scroll it (Android). Fallback support can be added with a bit of user agent (UA) sniffing. (Given that support for `position: fixed` is complex and therefore not binary, unfortunately UA sniffing may be the only way. See Brad Frost’s [Fixed Positioning in Mobile Browsers](http://bradfrostweb.com/blog/mobile/fixed-position/).)
+
+      <p>UA sniffing is used in the examples: see [`examples/ua-sniffer.js`](https://github.com/domchristie/drawer/blob/master/examples/ua-sniffer.js), and the styles [`examples/site.css`](https://github.com/domchristie/drawer/blob/master/examples/site.css).
 
 ## Examples
 
@@ -54,6 +60,7 @@ Drawer uses ideas from the following resources:
 *   [Mailchimp Pattern Library](http://ux.mailchimp.com/patterns)
 *   [Multi-Device Layout Patterns](http://www.lukew.com/ff/entry.asp?1514) by Luke Wroblewski
 *   [Off Canvas: A Multi-Device Web Layout Pattern](http://jasonweaver.name/lab/offcanvas/) by Jason Weaver
+*   [Fixed Positioning in Mobile Browsers](http://bradfrostweb.com/blog/mobile/fixed-position/) by Brad Frost
 *   [Jank Free](http://jankfree.org/)
 
 ## Licence

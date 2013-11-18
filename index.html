@@ -104,7 +104,13 @@
 
       <h2 id="browser-support">Browser Support</h2>
 
-      <p>Drawer has been designed to work with <em>modern browers</em> i.e. <strong>recent versions</strong> of <strong>Chrome</strong>, <strong>Firefox</strong>, <strong>Internet Explorer</strong>, and <strong>Opera</strong>. The two column layout will still work on <strong>IE8</strong>, but toggling the <code>drawer-open</code> class name will have no effect.</p>
+      <p>Drawer has been designed to work with <em>modern browers</em> i.e. <strong>recent versions</strong> of <strong>Chrome</strong>, <strong>Firefox</strong>, <strong>Safari</strong>, <strong>Internet Explorer</strong> (although sliding animations will not work in IE9), and <strong>Opera</strong>. IE 7/8 users will see the two-column version of the site (toggling will have no effect).</p>
+
+      <h3>Adding Support for iOS Safari &lt;=4 and Android &lt;=2</h3>
+
+      <p>The default implementation makes use of <code>position: fixed</code> to achieve two independent scrolling columns. <code>position: fixed</code> is poorly supported in some older browers, in particular iOS Safari &lt;=4 and Android &lt;=2. Users of these browsers may not be able view the all the content in the drawer (iOS), or may not be able to scroll it (Android). Fallback support can be added with a bit of user agent (UA) sniffing. (Given that support for <code>position: fixed</code> is complex and therefore not binary, unfortunately UA sniffing may be the only way. See Brad Frost’s <a href="http://bradfrostweb.com/blog/mobile/fixed-position/">Fixed Positioning in Mobile Browsers</a>.)
+
+      <p>UA sniffing is used in the examples: see <a href="https://github.com/domchristie/drawer/blob/master/examples/ua-sniffer.js"><code>examples/ua-sniffer.js</code></a>, and the styles <a href="https://github.com/domchristie/drawer/blob/master/examples/site.css"><code>examples/site.css</code></a>.</p>
 
       <h2>Examples</h2>
 
@@ -121,6 +127,7 @@
         <li><a href="http://ux.mailchimp.com/patterns">Mailchimp Pattern Library</a></li>
         <li><a href="http://www.lukew.com/ff/entry.asp?1514">Multi-Device Layout Patterns</a> by Luke Wroblewski</li>
         <li><a href="http://jasonweaver.name/lab/offcanvas/">Off Canvas: A Multi-Device Web Layout Pattern</a> by Jason Weaver</li>
+        <li><a href="http://bradfrostweb.com/blog/mobile/fixed-position/">Fixed Positioning in Mobile Browsers</a> by Brad Frost</li>
         <li><a href="http://jankfree.org/">Jank Free</a></li>
       </ul>
 
