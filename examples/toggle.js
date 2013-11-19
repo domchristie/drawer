@@ -1,5 +1,6 @@
 (function() {
-  $(document).on('click touchstart', '[data-drawer-toggle]', function(evt) {
+  var clickType = document.ontouchstart !== null ? 'click' : 'touchstart';
+  $(document).on(clickType, '[data-drawer-toggle]', function(evt) {
     evt.preventDefault();
     $('body').toggleClass('drawer-open');
   });
