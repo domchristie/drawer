@@ -16,9 +16,6 @@ p, ul, ol {
   line-height: 1.4;
   max-width: 49rem;
 }
-.drawer{
-  background-color: #ccc;
-}
 [class^=ios-safari-3-] .drawer,
 [class^=ios-safari-4-] .drawer,
 [class^=android-1-] .drawer,
