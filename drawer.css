@@ -21,9 +21,9 @@ body {
   width: 250px;
   z-index: auto;
 
-  /* The following 3 lines achieves independently scolling columns.
+  /* Makes .drawer an independently scrolling column
     Comment out if you require support for iOS Safari <=4.x, Android <=2.x and
-    the like (without UA sniffing) */
+    the like (without UA sniffing: see README) */
   position: fixed;
   bottom: 0;
   overflow-y: auto;
