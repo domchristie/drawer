@@ -63,14 +63,21 @@ body {
 /* 
   Transitions
   ------------ */
-
 .drawer,
 .drawer-butt {
-  -webkit-transition: opacity .2s, margin-left .2s, -webkit-transform .2s;
-  transition:         opacity .2s, margin-left .2s,         transform .2s;
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+}
+.drawer {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.drawer-butt {
+  -webkit-transition-property: margin-left, -webkit-transform;
+  transition-property:         margin-left, transform;
 
-  /* **Important**: prevent transition flickering
-    (see http://stackoverflow.com/a/3921870/783009) */
+  /* Prevent transition flickering
+    Do not apply this to .drawer. It will break scrolling on Android 2 */
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
