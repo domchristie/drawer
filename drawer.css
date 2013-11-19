@@ -1,5 +1,5 @@
 /*
-  Drawer v0.3.0
+  Drawer v0.3.1
   ==============
   Copyright (c) Dom Christie 2013 */
 
@@ -49,8 +49,8 @@ body {
   width: auto;
   margin-left: 250px;
 
-  /* Override this with anything, (ideally not transparent/none!) */
-  background: #e6e6e6;
+  /* Override this with anything (ideally not transparent/none!) */
+  background: #fff;
 }
 
 .drawer-open .drawer-butt {
