@@ -104,13 +104,14 @@
       <li>Include the <code>drawer.css</code> stylesheet</li>
       <li>Wrap your sidebar content in an element with a class of <code>drawer</code></li>
       <li>Wrap any content that “butts up” to the drawer in an element with a class of <code>drawer-butt</code>. (This will usually be your main content, but it may also be a header, for example. See <a href="http://domchristie.github.io/drawer/examples/simple.html">simple example</a>.)</li>
+      <li>Give <code>.drawer-butt</code> a <code>background-color</code> (by default it’s <code>#fff</code>). Change the colour of <code>.drawer</code>, by modifying the <code>background-color</code> of the <code>body</code> element. This allows the drawer to always appear full-height, independent of its <code>position</code> CSS value.</li>
       <li><p>Toggle the drawer by adding/removing the <code>drawer-open</code> class to the body element.</p>
 
       <p>For example, if you had a toggle element with a <code>data-drawer-toggle</code> attribute, you might toggle the drawer with jQuery, as follows:</p>
 
       <pre><code>$(document).on('click touchstart', '[data-drawer-toggle]', function() {
   $('body').toggleClass('drawer-open');
-  });</code></pre></li>
+});</code></pre></li>
     </ol>
 
     <h2 id="browser-support">Browser Support</h2>
