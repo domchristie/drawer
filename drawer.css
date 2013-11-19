@@ -1,5 +1,5 @@
 /*
-  Drawer v0.2.2
+  Drawer v0.2.3
   ==============
   Copyright (c) Dom Christie 2013 */
 
@@ -8,11 +8,6 @@
 body {
   margin: 0;
   padding: 0;
-
-  /* **Important**: prevent transition flickering */
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 /*
@@ -55,6 +50,12 @@ body {
   /* Transitions */
   -webkit-transition: margin-left .2s, -webkit-transform .2s;
   transition: margin-left .2s, transform .2s;
+
+  /* **Important**: prevent transition flickering
+    (see http://stackoverflow.com/a/3921870/783009) */
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .drawer-open .drawer-butt {
@@ -77,12 +78,18 @@ body {
     overflow-x: hidden;
   }
 
-  /* Add momentum scrolling when drawer is open. Applying this breaks the
-    tap-status-bar-to-return-to-top behaviour, however, given that the drawer is
-    open, and content is shifted, this is deemed acceptable */
-  .drawer-open .drawer {
+  /* Uncomment below to add momentum scrolling when drawer is open.
+    
+    This has the following side-effects:
+
+    1. Removes tap-status-bar-to-return-to-top behaviour (on some devices),
+       however, given that the drawer is open, and content is shifted, this may
+       be deemed acceptable
+    2. Can cause a janky flicker when transitioning */
+
+  /*.drawer-open .drawer {
     -webkit-overflow-scrolling: touch;
-  }
+  }*/
 
   .drawer-butt {
     margin-left: 0;
