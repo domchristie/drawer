@@ -26,7 +26,6 @@ There are a few other implementations of the general UI pattern, but it was diff
 1.  Add the following meta viewport tag:
 
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-
 2.  Include the `drawer.css` stylesheet
 3.  Wrap your sidebar content in an element with a class of `drawer`
 4.  Wrap any content that “butts up” to the drawer in an element with a class of `drawer-butt`. (This will usually be your main content, but it may also be a header, for example. See [simple example](http://domchristie.github.io/drawer/examples/simple.html).)
