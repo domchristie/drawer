@@ -1,5 +1,5 @@
 /*
-  Drawer v0.3.2
+  Drawer v0.4.0
   ==============
   Copyright (c) Dom Christie 2013 */
 
@@ -56,8 +56,10 @@ body {
 .drawer-open .drawer-butt {
   margin-left: 250px;
   -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
+  -moz-transform:    translate(0, 0);
+  -ms-transform:     translate(0, 0);
+  -o-transform:      translate(0, 0);
+  transform:         translate(0, 0);
 }
 
 /* 
@@ -66,15 +68,21 @@ body {
 .drawer,
 .drawer-butt {
   -webkit-transition-duration: .2s;
-  transition-duration: .2s;
+  -moz-transition-duration:    .2s;
+  -o-transition-duration:      .2s;
+  transition-duration:         .2s;
 }
 .drawer {
   -webkit-transition-property: opacity;
-  transition-property: opacity;
+  -moz-transition-property:    opacity;
+  -o-transition-property:      opacity;
+  transition-property:         opacity;
 }
 .drawer-butt {
   -webkit-transition-property: margin-left, -webkit-transform;
-  transition-property:         margin-left, transform;
+  -moz-transition-property:    margin-left,    -moz-transform;
+  -o-transition-property:      margin-left,      -o-transform;
+  transition-property:         margin-left,         transform;
 
   /* Prevent transition flickering
     Do not apply this to .drawer. It will break scrolling on Android 2 */
@@ -126,7 +134,9 @@ body {
   .drawer-open .drawer-butt {
     margin-left: 0;
     -webkit-transform: translate(250px, 0);
-    -ms-transform: translate(250px, 0);
-    transform: translate(250px, 0);
+    -moz-transform:    translate(250px, 0);
+    -ms-transform:     translate(250px, 0);
+    -o-transform:      translate(250px, 0);
+    transform:         translate(250px, 0);
   }
 }
