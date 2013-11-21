@@ -1,9 +1,11 @@
 (function() {
-  var clickType = ('ontouchstart' in document.documentElement ||
-    window.navigator.msPointerEnabled) ? 'touchstart' : 'click';
+  var isTouch = 'ontouchstart' in document.documentElement ||
+    window.navigator.msPointerEnabled;
   
-  $(document).on(clickType, '[data-drawer-toggle]', function(evt) {
+  $(document).on('touchstart click', '[data-drawer-toggle]', function(evt) {
     evt.preventDefault();
-    $('body').toggleClass('drawer-open');
+    if(isTouch && evt.type === 'click') return;
+
+    $('html').toggleClass('drawer-open');
   });
 })()
