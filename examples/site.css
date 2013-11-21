@@ -20,12 +20,3 @@ pre {
   padding-right: 2%;
   background-color: #e6e6e6;
 }
-
-[class^=ios-safari-3-] .drawer,
-[class^=ios-safari-4-] .drawer,
-[class^=android-1-] .drawer,
-[class^=android-2-] .drawer {
-  position: absolute;
-  bottom: auto;
-  overflow-y: visible;
-}

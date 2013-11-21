@@ -3,7 +3,6 @@
 <head>
 <link rel="stylesheet" type="text/css" href="drawer.css" />
 <link rel="stylesheet" type="text/css" href="examples/site.css" />
-<script src="examples/ua-sniffer.js"></script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <title>Drawer: jank free sliding sidebar layouts</title>
@@ -71,84 +70,77 @@
     <p style="text-align: center">Dummy text from <a href="http://spaceipsum.com">Space Ipsum</a></p>
   </div>
   <div class="drawer-butt">
-  <div class="main">
-        <h1>Drawer: jank free sliding sidebar layouts</h1>
+    <div class="main">
+      <h1>Drawer: jank free sliding sidebar layouts</h1>
 
-        <h2 id="what">What?</h2>
+      <h2 id="what">What?</h2>
 
-        <p><strong>Drawer</strong> is a starting point for building 2-column responsive layouts that implement a smooth sliding sidebar (or <em>drawer</em>).</p>
+      <p><strong>Drawer</strong> is a starting point for building 2-column responsive layouts that implement a smooth sliding sidebar (or <em>drawer</em>).</p>
 
-        <p>The default behaviour is as follows:</p>
+      <p>The default behaviour is as follows:</p>
 
-        <p><strong>On smaller viewport sizes</strong>: the drawer is hidden by default. When the drawer is shown, the content is shifted to the right, whilst maintaining its width.<br /><button data-drawer-toggle>Toggle drawer</button> (on smaller viewports only)</p>
+      <p><strong>On smaller viewport sizes</strong>: the drawer is hidden by default. When the drawer is shown, the content is shifted to the right, whilst maintaining its width.<br /><button data-drawer-toggle>Toggle drawer</button> (on smaller viewports only)</p>
 
-        <p><strong>On larger viewport sizes</strong>: the drawer is always shown (toggling makes no difference). Content fills the remaining space.</p>
+      <p><strong>On larger viewport sizes</strong>: the drawer is always shown (toggling makes no difference). Content fills the remaining space.</p>
 
-        <h2 id="why">Why?</h2>
+      <h2 id="why">Why?</h2>
 
-        <p>The project was created to fulfil the following requirements:</p>
+      <p>The project was created to fulfil the following requirements:</p>
 
-        <ul>
-          <li>It should include <strong>jank free sliding transitions</strong>, by making use of hardware accelerated properties (i.e. CSS transforms).</li>
-          <li>It <strong>should not break native scrolling controls</strong>: the main content should be scrollable using page up/down keys, as well as by using the <em>tap-status-bar-to-return-to-top</em> behaviour.</li>
-          <li><strong>Very few (if any) external dependencies</strong>, to keep it lightweight and easy to customise.</li>
-          <li>Leave most of the interaction/visual design to the implementer.</li>
-        </ul>
+      <ul>
+        <li>It should include <strong>jank free sliding transitions</strong>, by making use of hardware accelerated properties (i.e. CSS transforms).</li>
+        <li>It <strong>should not break native scrolling controls</strong>: the main content should be scrollable using page up/down keys, as well as by using the <em>tap-status-bar-to-return-to-top</em> behaviour.</li>
+        <li><strong>Very few (if any) external dependencies</strong>, to keep it lightweight and easy to customise.</li>
+        <li>Leave most of the interaction/visual design to the implementer.</li>
+      </ul>
 
-        <p>There are a few other implementations of the general UI pattern, but it was difficult to find one that fulfilled all of the above.</p>
+      <p>There are a few other implementations of the general UI pattern, but it was difficult to find one that fulfilled all of the above.</p>
 
-        <h2 id="usage">Usage</h2>
+      <h2 id="usage">Usage</h2>
 
-        <ol>
-          <li><p>Add the following meta viewport tag:</p>
+      <ol>
+        <li><p>Add the following meta viewport tag:</p>
 
-          <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" /&gt;</code></pre></li>
-          <li>Include the <code>drawer.css</code> stylesheet</li>
-          <li>Wrap your sidebar content in an element with a class of <code>drawer</code></li>
-          <li>Wrap any content that “butts up” to the drawer in an element with a class of <code>drawer-butt</code>. (This will usually be your main content, but it may also be a header, for example. See <a href="http://domchristie.github.io/drawer/examples/simple.html">simple example</a>.)</li>
-          <li>Give <code>.drawer-butt</code> a <code>background-color</code> (by default it’s <code>#fff</code>). Change the colour of <code>.drawer</code>, by modifying the <code>background-color</code> of the <code>body</code> element. This allows the drawer to always appear full-height, independent of its <code>position</code> CSS value.</li>
-          <li><p>Toggle the drawer by adding/removing the <code>drawer-open</code> class to the body element.</p>
+        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" /&gt;</code></pre></li>
+        <li>Include the <code>drawer.css</code> stylesheet</li>
+        <li>Wrap your sidebar content in an element with a class of <code>drawer</code></li>
+        <li>Wrap any content that “butts up” to the drawer in an element with a class of <code>drawer-butt</code>. (This will usually be your main content, but it may also be a header, for example. See <a href="http://domchristie.github.io/drawer/examples/simple.html">simple example</a>.)</li>
+        <li>Give <code>.drawer-butt</code> a <code>background-color</code> (by default it’s <code>#fff</code>). Change the colour of <code>.drawer</code>, by modifying the <code>background-color</code> of the <code>body</code> element. This allows the drawer to always appear full-height, independent of its <code>position</code> CSS value.</li>
+        <li><p>Toggle the drawer by adding/removing the <code>drawer-open</code> class to the body element.</p>
 
-          <p>For example, if you had a toggle element with a <code>data-drawer-toggle</code> attribute, you might toggle the drawer with jQuery, as follows:</p>
+        <p>For example, if you had a toggle element with a <code>data-drawer-toggle</code> attribute, you might toggle the drawer with jQuery, as follows:</p>
 
-          <pre><code>$(document).on('click touchstart', '[data-drawer-toggle]', function() {
-      $('body').toggleClass('drawer-open');
-    });</code></pre></li>
-        </ol>
+        <pre><code>$(document).on('click touchstart', '[data-drawer-toggle]', function() {
+    $('body').toggleClass('drawer-open');
+  });</code></pre></li>
+      </ol>
 
-        <h2 id="browser-support">Browser Support</h2>
+      <h2 id="browser-support">Browser Support</h2>
 
-        <p>Drawer has been designed to work with <em>modern browers</em> i.e. <strong>recent versions</strong> of <strong>Chrome</strong>, <strong>Firefox</strong>, <strong>Safari</strong>, <strong>Internet Explorer</strong> (although sliding animations will not work in IE9), and <strong>Opera</strong>. IE 7/8 users will see the two-column version of the site (toggling will have no effect).</p>
+      <p>Drawer has been designed to work with <em>modern browers</em> i.e. <strong>recent versions</strong> of <strong>Chrome</strong>, <strong>Firefox</strong>, <strong>Safari</strong>, <strong>Opera</strong>, and <strong>Internet Explorer</strong> (although sliding animations will not work in IE9). IE 7/8 users will see the two-column version of the site (toggling will have no effect).</p>
 
-        <h3>Adding Support for iOS Safari &lt;=4 and Android &lt;=2</h3>
+      <h2>Examples</h2>
 
-        <p>The default implementation makes use of <code>position: fixed</code> to achieve two independent scrolling columns. <code>position: fixed</code> is poorly supported in some older browers, in particular iOS Safari &lt;=4 and Android &lt;=2. Users of these browsers may not be able view the all the content in the drawer (iOS), or may not be able to scroll it (Android). Fallback support can be added with a bit of user agent (UA) sniffing. (Given that support for <code>position: fixed</code> is complex and therefore not binary, unfortunately UA sniffing may be the only way. See Brad Frost’s <a href="http://bradfrostweb.com/blog/mobile/fixed-position/">Fixed Positioning in Mobile Browsers</a>.)
+      <ul>
+        <li><a href="http://domchristie.github.io/drawer/examples/simple.html">A toggle button that appears on smaller viewport sizes</a></li>
+        <li><a href="http://domchristie.github.io/drawer/examples/navigation.html">A responsive navigation bar example</a></li>
+      </ul>
 
-        <p>UA sniffing is used in the examples: see <a href="https://github.com/domchristie/drawer/blob/master/examples/ua-sniffer.js"><code>examples/ua-sniffer.js</code></a>, and the styles <a href="https://github.com/domchristie/drawer/blob/master/examples/site.css"><code>examples/site.css</code></a>.</p>
+      <h2 id="bibliography">Bibliography</h2>
 
-        <h2>Examples</h2>
+      <p>Drawer uses ideas from the following resources:</p>
 
-        <ul>
-          <li><a href="http://domchristie.github.io/drawer/examples/simple.html">A basic fixed header and toggle example</a></li>
-          <li><a href="http://domchristie.github.io/drawer/examples/navigation.html">A responsive navigation bar example</a></li>
-        </ul>
+      <ul>
+        <li><a href="http://ux.mailchimp.com/patterns">Mailchimp Pattern Library</a></li>
+        <li><a href="http://www.lukew.com/ff/entry.asp?1514">Multi-Device Layout Patterns</a> by Luke Wroblewski</li>
+        <li><a href="http://jasonweaver.name/lab/offcanvas/">Off Canvas: A Multi-Device Web Layout Pattern</a> by Jason Weaver</li>
+        <li><a href="http://jankfree.org/">Jank Free</a></li>
+      </ul>
 
-        <h2 id="bibliography">Bibliography</h2>
+      <h2 id="licence">Licence</h2>
 
-        <p>Drawer uses ideas from the following resources:</p>
-
-        <ul>
-          <li><a href="http://ux.mailchimp.com/patterns">Mailchimp Pattern Library</a></li>
-          <li><a href="http://www.lukew.com/ff/entry.asp?1514">Multi-Device Layout Patterns</a> by Luke Wroblewski</li>
-          <li><a href="http://jasonweaver.name/lab/offcanvas/">Off Canvas: A Multi-Device Web Layout Pattern</a> by Jason Weaver</li>
-          <li><a href="http://bradfrostweb.com/blog/mobile/fixed-position/">Fixed Positioning in Mobile Browsers</a> by Brad Frost</li>
-          <li><a href="http://jankfree.org/">Jank Free</a></li>
-        </ul>
-
-        <h2 id="licence">Licence</h2>
-
-        <p>Drawer is copyright © 2013 <a href="http://domchristie.co.uk">Dom Christie</a> and is released under the MIT licence.</p>
-  </div>
+      <p>Drawer is copyright © 2013 <a href="http://domchristie.co.uk">Dom Christie</a> and is released under the MIT licence.</p>
+    </div>
   </div>
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="examples/toggle.js"></script>

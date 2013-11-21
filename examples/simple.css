@@ -1,6 +1,6 @@
 .app__hd {
   display: none; /* Hide header on larger viewports */
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
