@@ -1,5 +1,5 @@
 /*
-  Drawer v0.4.0
+  Drawer v0.4.1
   ==============
   Copyright (c) Dom Christie 2013 */
 
@@ -65,24 +65,17 @@ body {
 /* 
   Transitions
   ------------ */
-.drawer,
-.drawer-butt {
-  -webkit-transition-duration: .2s;
-  -moz-transition-duration:    .2s;
-  -o-transition-duration:      .2s;
-  transition-duration:         .2s;
-}
 .drawer {
-  -webkit-transition-property: opacity;
-  -moz-transition-property:    opacity;
-  -o-transition-property:      opacity;
-  transition-property:         opacity;
+  -webkit-transition: opacity .3s;
+  -moz-transition:    opacity .3s;
+  -o-transition:      opacity .3s;
+  transition:         opacity .3s;
 }
 .drawer-butt {
-  -webkit-transition-property: margin-left, -webkit-transform;
-  -moz-transition-property:    margin-left,    -moz-transform;
-  -o-transition-property:      margin-left,      -o-transform;
-  transition-property:         margin-left,         transform;
+  -webkit-transition: margin-left .2s, -webkit-transform .2s;
+  -moz-transition:    margin-left .2s,    -moz-transform .2s;
+  -o-transition:      margin-left .2s,      -o-transform .2s;
+  transition:         margin-left .2s,         transform .2s;
 
   /* Prevent transition flickering
     Do not apply this to .drawer. It will break scrolling on Android 2 */
