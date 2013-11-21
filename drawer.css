@@ -1,5 +1,5 @@
 /*
-  Drawer v0.4.1
+  Drawer v0.5.0
   ==============
   Copyright (c) Dom Christie 2013 */
 
@@ -19,14 +19,6 @@ body {
   top: 0;
   left: 0;
   width: 250px;
-  z-index: auto;
-
-  /* Makes .drawer an independently scrolling column
-    Comment out if you require support for iOS Safari <=4.x, Android <=2.x and
-    the like (without UA sniffing: see README) */
-  position: fixed;
-  bottom: 0;
-  overflow-y: auto;
 }
 
 /* 
@@ -105,19 +97,6 @@ body {
   .drawer-open .drawer {
     opacity: 1;
   }
-
-  /* Uncomment below to add momentum scrolling when drawer is open.
-    
-    This has the following side-effects:
-
-    1. Removes tap-status-bar-to-return-to-top behaviour (on some devices),
-       however, given that the drawer is open, and content is shifted, this may
-       be deemed acceptable
-    2. Can cause a janky flicker when transitioning */
-
-  /*.drawer-open .drawer {
-    -webkit-overflow-scrolling: touch;
-  }*/
 
   .drawer-butt {
     margin-left: 0;
