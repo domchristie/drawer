@@ -1,5 +1,5 @@
 /*
-  Drawer v0.5.1
+  Drawer v0.5.2
   ==============
   Copyright (c) Dom Christie 2013 */
 
@@ -86,7 +86,6 @@ body {
     doing so prevents CSS transitions from working on Firefox (see
     https://bugzilla.mozilla.org/show_bug.cgi?id=625289) */
   html, body {
-    position: relative;
     overflow-x: hidden;
   }
 
