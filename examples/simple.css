@@ -1,10 +1,5 @@
 .app__hd {
   display: none; /* Hide header on larger viewports */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 3;
   height: 48px;
   background: #000;
   color: #fff;
@@ -17,9 +12,5 @@
 @media only screen and (max-width: 870px) {
   .app__hd {
     display: block;
-  }
-
-  .app__bd {
-    padding-top: 48px;
   }
 }

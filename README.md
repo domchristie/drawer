@@ -29,7 +29,7 @@ There are a few other implementations of the general UI pattern, but it was diff
 2.  Include the `drawer.css` stylesheet
 3.  Wrap your sidebar content in an element with a class of `drawer`
 4.  Wrap any content that “butts up” to the drawer in an element with a class of `drawer-butt`. (This will usually be your main content, but it may also be a header, for example. See [simple example](http://domchristie.github.io/drawer/examples/simple.html).)
-5.  Give `.drawer-butt` a `background-color` (by default it’s `#fff`). Change the colour of `.drawer`, by modifying the `background-color` of the `body` element. This allows the drawer to always appear full-height, independent of its `position` CSS value.
+5.  Read the `drawer.css` source code, and customise as you wish.
 6.  Toggle the drawer by adding/removing the `drawer-open` class to the body element
 
     For example, if you had a toggle element with a `data-drawer-toggle` attribute, you might toggle the drawer with jQuery, as follows:
