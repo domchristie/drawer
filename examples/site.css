@@ -14,9 +14,10 @@ pre {
   overflow: auto;
 }
 
+.app__bd {
+  background-color: #e6e6e6;
+}
 .main {
-  overflow: hidden;
   padding-left: 2%;
   padding-right: 2%;
-  background-color: #e6e6e6;
 }
