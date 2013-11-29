@@ -1,9 +1,18 @@
 /*
-  Drawer v0.5.2
+  Drawer v0.5.3
   ==============
   Copyright (c) Dom Christie 2013 */
 
 @charset "UTF-8";
+
+/*
+  Prevents content from being scrolled over the drawer.
+  Altering this property dynamically (including through media queries) prevents
+  transitions from starting (and transitionend from firing)
+  (see https://bugzilla.mozilla.org/show_bug.cgi?id=625289) */
+html, body {
+  overflow-x: hidden;
+}
 
 body {
   margin: 0;
@@ -81,13 +90,6 @@ body {
   -------------- */
 
 @media only screen and (max-width: 870px) {
-  /* **Unfortunate, but necessary!**: prevents content from being scrolled
-    over the drawer. Ideally, this would only be placed on `.drawer-open`, but
-    doing so prevents CSS transitions from working on Firefox (see
-    https://bugzilla.mozilla.org/show_bug.cgi?id=625289) */
-  html, body {
-    overflow-x: hidden;
-  }
 
   /* Make .drawer transparent to ensure its “hidden”, even when .drawer-butt
     content is shorter  */
